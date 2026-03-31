@@ -2,6 +2,7 @@ import { test } from "@playwright/test";
 
 test.beforeEach(async({page}) => {
     await page.goto('https://ecd.rs/')
+    await page.getByText('Blog')
     await page.getByText('O nama').click()
 })
 
